@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="620" viewBox="0 0 980 620" font-family="Helvetica,Arial,sans-serif">
+  <rect width="980" height="620" fill="#ffffff"/>
+
+  <!-- Internet user -->
+  <rect x="20" y="270" width="120" height="60" rx="6" fill="#f7f3e9" stroke="#171714" stroke-width="1.5"/>
+  <text x="80" y="295" font-size="13" text-anchor="middle" fill="#171714">Diner's</text>
+  <text x="80" y="311" font-size="13" text-anchor="middle" fill="#171714">Browser</text>
+
+  <!-- VPC box -->
+  <rect x="190" y="40" width="760" height="540" rx="8" fill="none" stroke="#0b6b3a" stroke-width="2" stroke-dasharray="6,4"/>
+  <text x="210" y="65" font-size="14" fill="#0b6b3a" font-weight="bold">VPC 10.0.0.0/16 (us-east-2)</text>
+
+  <!-- ALB -->
+  <rect x="380" y="90" width="180" height="55" rx="6" fill="#f5c542" stroke="#171714" stroke-width="1.5"/>
+  <text x="470" y="113" font-size="13" text-anchor="middle" fill="#171714" font-weight="bold">Application Load Balancer</text>
+  <text x="470" y="130" font-size="11" text-anchor="middle" fill="#171714">Public subnets · 2 AZs</text>
+
+  <!-- Public subnets -->
+  <rect x="220" y="170" width="230" height="60" rx="4" fill="#eef4ee" stroke="#0b6b3a"/>
+  <text x="335" y="192" font-size="11" text-anchor="middle" fill="#0b6b3a">Public Subnet A (10.0.0.0/24)</text>
+  <text x="335" y="208" font-size="10" text-anchor="middle" fill="#716f67">us-east-2a · Internet Gateway route</text>
+
+  <rect x="500" y="170" width="230" height="60" rx="4" fill="#eef4ee" stroke="#0b6b3a"/>
+  <text x="615" y="192" font-size="11" text-anchor="middle" fill="#0b6b3a">Public Subnet B (10.0.1.0/24)</text>
+  <text x="615" y="208" font-size="10" text-anchor="middle" fill="#716f67">us-east-2b · Internet Gateway route</text>
+
+  <!-- App tier private subnets -->
+  <rect x="220" y="270" width="230" height="100" rx="4" fill="#fdf6e3" stroke="#c8342f"/>
+  <text x="335" y="292" font-size="11" text-anchor="middle" fill="#c8342f">Private App Subnet A (10.0.10.0/24)</text>
+  <rect x="245" y="305" width="180" height="45" rx="4" fill="#171714"/>
+  <text x="335" y="322" font-size="11" text-anchor="middle" fill="#f7f3e9">EC2 (Node/Express)</text>
+  <text x="335" y="338" font-size="10" text-anchor="middle" fill="#c9c5bc">Auto Scaling Group</text>
+
+  <rect x="500" y="270" width="230" height="100" rx="4" fill="#fdf6e3" stroke="#c8342f"/>
+  <text x="615" y="292" font-size="11" text-anchor="middle" fill="#c8342f">Private App Subnet B (10.0.11.0/24)</text>
+  <rect x="525" y="305" width="180" height="45" rx="4" fill="#171714"/>
+  <text x="615" y="322" font-size="11" text-anchor="middle" fill="#f7f3e9">EC2 (Node/Express)</text>
+  <text x="615" y="338" font-size="10" text-anchor="middle" fill="#c9c5bc">Auto Scaling Group</text>
+
+  <!-- SSM VPC endpoint -->
+  <rect x="770" y="285" width="150" height="65" rx="4" fill="#e8eefc" stroke="#2a5db0"/>
+  <text x="845" y="306" font-size="11" text-anchor="middle" fill="#2a5db0">SSM Interface</text>
+  <text x="845" y="320" font-size="11" text-anchor="middle" fill="#2a5db0">VPC Endpoint</text>
+  <text x="845" y="336" font-size="9" text-anchor="middle" fill="#716f67">DB password fetch</text>
+  <text x="845" y="348" font-size="9" text-anchor="middle" fill="#716f67">(no NAT needed)</text>
+
+  <!-- DB tier private subnets -->
+  <rect x="220" y="410" width="230" height="90" rx="4" fill="#f0f0fb" stroke="#4a3f8f"/>
+  <text x="335" y="432" font-size="11" text-anchor="middle" fill="#4a3f8f">Private DB Subnet A (10.0.20.0/24)</text>
+
+  <rect x="500" y="410" width="230" height="90" rx="4" fill="#f0f0fb" stroke="#4a3f8f"/>
+  <text x="615" y="432" font-size="11" text-anchor="middle" fill="#4a3f8f">Private DB Subnet B (10.0.21.0/24)</text>
+
+  <rect x="330" y="450" width="290" height="45" rx="4" fill="#4a3f8f"/>
+  <text x="475" y="472" font-size="12" text-anchor="middle" fill="#f7f3e9">RDS PostgreSQL (Single-AZ, db.t3.micro)</text>
+
+  <!-- Arrows -->
+  <path d="M140 300 L380 117" stroke="#171714" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+  <text x="230" y="180" font-size="10" fill="#716f67" transform="rotate(-24 230 180)">HTTPS/HTTP :80</text>
+
+  <path d="M470 145 L335 270" stroke="#171714" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+  <path d="M470 145 L615 270" stroke="#171714" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+  <text x="500" y="200" font-size="10" fill="#716f67">:3000</text>
+
+  <path d="M425 340 L500 470" stroke="#171714" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+  <path d="M615 350 L580 450" stroke="#171714" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+  <text x="480" y="400" font-size="10" fill="#716f67">:5432 (in-VPC)</text>
+
+  <path d="M425 320 L770 315" stroke="#2a5db0" stroke-width="1.5" fill="none" stroke-dasharray="4,3" marker-end="url(#arrow-blue)"/>
+  <path d="M615 320 L770 320" stroke="#2a5db0" stroke-width="1.5" fill="none" stroke-dasharray="4,3" marker-end="url(#arrow-blue)"/>
+
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L6,3 z" fill="#171714"/>
+    </marker>
+    <marker id="arrow-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L6,3 z" fill="#2a5db0"/>
+    </marker>
+  </defs>
+
+  <text x="500" y="580" font-size="11" text-anchor="middle" fill="#716f67">No NAT Gateway: private subnets route only within the VPC + to the SSM interface endpoint. RDS and EC2 never reach the public internet.</text>
+</svg>

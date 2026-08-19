@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Spice Route Kitchen | Guyanese & Caribbean Cuisine</title>
+<meta name="description" content="Spice Route Kitchen — Guyanese and Caribbean food in a warm, welcoming setting.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Caslon+Display&display=swap');
+:root{
+  --ink:#171714;
+  --cream:#f7f3e9;
+  --muted:#716f67;
+  --line:#dad4c6;
+  --green:#0b6b3a;
+  --gold:#f5c542;
+  --red:#c8342f;
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:'DM Sans',sans-serif}a{color:inherit;text-decoration:none}img{display:block;width:100%;height:100%;object-fit:cover}.wrap{width:min(1180px,90vw);margin:auto}
+.flag-line{height:5px;background:linear-gradient(90deg,var(--green) 0 58%,var(--gold) 58% 72%,var(--red) 72% 86%,var(--ink) 86% 93%,#fff 93% 100%)}
+.nav{height:82px;display:flex;align-items:center;justify-content:space-between}.logo{font-family:'Libre Caslon Display',serif;font-size:25px}.logo em{font-style:normal;color:var(--green)}.links{display:flex;align-items:center;gap:30px;font-size:13px}.button{display:inline-block;border:1px solid var(--ink);padding:12px 19px;font-size:13px;transition:.2s ease;cursor:pointer;background:none;font-family:inherit}.button:hover{transform:translateY(-1px)}.button.green{background:var(--green);border-color:var(--green);color:white}.button.dark{background:var(--ink);color:var(--cream)}
+.hero{position:relative;height:calc(100vh - 87px);min-height:620px;background:url('assets/food1.webp') center/cover no-repeat}.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.67),rgba(0,0,0,.08))}.hero-copy{position:absolute;z-index:1;left:5vw;top:50%;transform:translateY(-50%);color:white;max-width:680px}.kicker{font-size:12px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:18px}.hero .kicker{color:var(--gold)}.hero h1,h2{font-family:'Libre Caslon Display',serif;font-weight:400}.hero h1{font-size:clamp(58px,8vw,105px);line-height:.94;margin:0 0 24px}.hero p{font-size:18px;line-height:1.65;max-width:520px;margin:0 0 30px;color:#f0eee9}.hero .button{border-color:white;color:white;margin-right:10px}.hero .button.primary{background:var(--green);border-color:var(--green);color:white}
+section{padding:110px 0}.section-kicker{color:var(--green)}
+.space-grid{display:grid;grid-template-columns:.78fr 1.22fr;gap:70px;align-items:center}.space-copy h2{font-size:clamp(44px,5vw,68px);line-height:1.04;margin:0 0 22px}.space-copy p{font-size:17px;line-height:1.8;color:var(--muted);margin:0 0 28px}.space-photo{height:620px;position:relative}.space-photo:after{content:"";position:absolute;width:82px;height:7px;background:linear-gradient(90deg,var(--green) 0 45%,var(--gold) 45% 70%,var(--red) 70% 100%);left:-25px;bottom:34px}
+.mini-gallery{margin-top:50px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.mini-gallery img{height:220px;border-radius:2px}
+.intro{text-align:center;max-width:760px;margin:auto}.intro h2{font-size:clamp(42px,5vw,66px);margin:0 0 22px}.intro p{font-size:17px;line-height:1.8;color:var(--muted);margin:0}.food-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:65px}.food-card img{height:420px}.food-card h3{font-family:'Libre Caslon Display',serif;font-size:25px;font-weight:400;margin:18px 0 5px}.food-card p{margin:0;color:var(--muted);font-size:14px}.food-card:first-child h3{color:var(--green)}
+.split{padding:0;display:grid;grid-template-columns:1fr 1fr;background:var(--ink);color:var(--cream)}.split-image{min-height:650px}.split-copy{padding:90px 8vw;display:flex;justify-content:center;flex-direction:column}.split .kicker{color:var(--gold)}.split h2{font-size:clamp(43px,5vw,68px);line-height:1.05;margin:0 0 22px}.split p{line-height:1.8;color:#c9c5bc;max-width:480px;margin:0 0 28px}.split .button{border-color:var(--gold);color:var(--gold);width:max-content}
+.review{padding:100px 0;text-align:center;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.review:before{content:"";display:block;width:58px;height:5px;background:linear-gradient(90deg,var(--green) 0 45%,var(--gold) 45% 70%,var(--red) 70% 100%);margin:0 auto 32px}.review blockquote{font-family:'Libre Caslon Display',serif;font-size:clamp(28px,3.5vw,46px);line-height:1.35;max-width:900px;margin:0 auto 25px}.review span{font-size:13px;color:var(--muted)}
+.reserve{background:var(--ink);color:var(--cream)}.reserve .wrap{max-width:720px}.reserve .intro h2{color:var(--cream)}.reserve .intro p{color:#c9c5bc}
+.reserve-form{margin-top:55px;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.reserve-form .field{display:flex;flex-direction:column;gap:8px}
+.reserve-form .field.full{grid-column:1 / -1}
+.reserve-form label{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#c9c5bc}
+.reserve-form input,.reserve-form textarea{background:#22221d;border:1px solid #3a3a33;color:var(--cream);padding:13px 14px;font-family:inherit;font-size:15px;border-radius:2px}
+.reserve-form input:focus,.reserve-form textarea:focus{outline:none;border-color:var(--gold)}
+.reserve-form textarea{resize:vertical;min-height:80px}
+.reserve-submit{grid-column:1 / -1;margin-top:6px}
+#reserve-status{grid-column:1 / -1;font-size:14px;padding:12px 14px;border-radius:2px;display:none}
+#reserve-status.ok{display:block;background:rgba(11,107,58,.25);border:1px solid var(--green);color:#c9f0d8}
+#reserve-status.err{display:block;background:rgba(200,52,47,.2);border:1px solid var(--red);color:#f5c9c7}
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:100px;align-items:start}.visit h2{font-size:clamp(42px,5vw,64px);margin:0 0 18px}.visit p{color:var(--muted);line-height:1.7}.details{border-top:3px solid var(--green)}.row{padding:18px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:25px;font-size:14px}.placeholder{color:#99958d}.footer{border-top:1px solid var(--line);padding:30px 0 45px;color:var(--muted);font-size:12px}.footer .wrap{display:flex;justify-content:space-between}.footer strong{color:var(--green);font-weight:600}
+@media(max-width:760px){.nav{height:70px}.links a:not(.button){display:none}.hero{height:75vh;min-height:570px}.hero-copy{left:6vw;right:6vw}.hero h1{font-size:57px}section{padding:75px 0}.space-grid{grid-template-columns:1fr;gap:40px}.space-photo{height:460px}.space-photo:after{left:18px;bottom:20px}.mini-gallery{grid-template-columns:1fr 1fr}.food-grid{grid-template-columns:1fr;margin-top:45px}.food-card img{height:420px}.split{grid-template-columns:1fr}.split-image{min-height:480px}.split-copy{padding:70px 6vw}.reserve-form{grid-template-columns:1fr}.visit{grid-template-columns:1fr;gap:50px}.footer .wrap{flex-direction:column;gap:8px}}
+</style>
+</head>
+<body>
+<div class="flag-line" aria-hidden="true"></div>
+<div class="wrap"><nav class="nav"><a class="logo" href="#">Spice Route <em>Kitchen</em></a><div class="links"><a href="#space">Our Space</a><a href="#menu">Menu</a><a href="#reserve">Reserve</a><a href="#visit">Visit</a><a class="button green" href="https://toast.app/r/spice-route-kitchen-nyc" target="_blank" rel="noopener">Order Online</a></div></nav></div>
+<header class="hero"><div class="hero-copy"><div class="kicker">Guyanese & Caribbean Cuisine</div><h1>Good food.<br>Good company.</h1><p>Guyanese and Caribbean favorites, generous plates, and tropical drinks served in a place made for getting together.</p><a class="button primary" href="#menu">View Menu</a><a class="button" href="#reserve">Reserve a Table</a></div></header>
+<main>
+<section id="space"><div class="wrap"><div class="space-grid"><div class="space-copy"><div class="kicker section-kicker">Spice Route Kitchen</div><h2>Come in.<br>Stay awhile.</h2><p>A warm neighborhood space for family dinners, celebrations, drinks with friends, and the kind of meals that turn into long conversations.</p><a class="button" href="#reserve">Reserve Your Table</a></div><div class="space-photo"><img src="assets/outdoor1.webp" alt="Spice Route Kitchen outdoor patio dining space with string lights"></div></div>
+<div class="mini-gallery"><img src="assets/indoor4.webp" alt="Spice Route Kitchen indoor dining room"><img src="assets/indoor5.webp" alt="Spice Route Kitchen dining room seating"><img src="assets/drinks3.webp" alt="Tropical cocktail close up"></div>
+</div></section>
+<section id="menu"><div class="wrap"><div class="intro"><div class="kicker section-kicker">From our kitchen</div><h2>Come hungry.</h2><p>Comforting Guyanese and Caribbean cooking with bold seasoning and familiar favorites—from fried rice and seafood to rich curries and crispy bites.</p></div><div class="food-grid"><article class="food-card"><img src="assets/food3.webp" alt="Caribbean fried rice with chicken and shrimp"><h3>Fried Rice</h3><p>A house favorite made for a proper meal.</p></article><article class="food-card"><img src="assets/food1.webp" alt="Seafood platter with shrimp, lobster tail and broccoli"><h3>Seafood</h3><p>Fresh, savory and full of flavor.</p></article><article class="food-card"><img src="assets/food5.webp" alt="Caribbean curry stew"><h3>Caribbean Classics</h3><p>Deeply seasoned dishes worth coming back for.</p></article><article class="food-card"><img src="assets/food2.webp" alt="Chow mein topped with roast chicken"><h3>Chow Mein</h3><p>Hearty noodles, done our way.</p></article><article class="food-card"><img src="assets/food4.webp" alt="Crispy fried wontons with dipping sauce"><h3>Crispy Wontons</h3><p>The bite everyone reaches for first.</p></article></div></div></section>
+<section class="split"><div class="split-image"><img src="assets/drinks1.webp" alt="Tropical cocktails on a tray"></div><div class="split-copy"><div class="kicker">Drinks</div><h2>Something tropical.</h2><p>Frozen drinks and colorful cocktails for dinner, celebrations, or simply staying for another round.</p><a class="button" href="#reserve">Reserve a table</a></div></section>
+<section class="review"><div class="wrap"><blockquote>"Big portions, bold seasoning, and the kind of service that remembers your order. Our new go-to spot for a family dinner."</blockquote><span>Guest review</span></div></section>
+<section id="reserve" class="reserve"><div class="wrap"><div class="intro"><div class="kicker section-kicker" style="color:var(--gold)">Book ahead</div><h2>Reserve your table.</h2><p>Tell us when you're coming and how many, and we'll have your table ready.</p></div>
+<form id="reserve-form" class="reserve-form" novalidate>
+  <div class="field"><label for="r-name">Name</label><input id="r-name" name="name" type="text" required autocomplete="name"></div>
+  <div class="field"><label for="r-email">Email</label><input id="r-email" name="email" type="email" required autocomplete="email"></div>
+  <div class="field"><label for="r-phone">Phone</label><input id="r-phone" name="phone" type="tel" required autocomplete="tel"></div>
+  <div class="field"><label for="r-party">Party size</label><input id="r-party" name="partySize" type="number" min="1" max="20" required></div>
+  <div class="field"><label for="r-date">Date</label><input id="r-date" name="date" type="date" required></div>
+  <div class="field"><label for="r-time">Time</label><input id="r-time" name="time" type="time" required></div>
+  <div class="field full"><label for="r-notes">Notes (optional)</label><textarea id="r-notes" name="notes" placeholder="Booth seating, birthday, allergies, etc."></textarea></div>
+  <div id="reserve-status" role="status"></div>
+  <button type="submit" class="button green reserve-submit" id="reserve-submit">Request Reservation</button>
+</form>
+</div></section>
+<section id="visit"><div class="wrap visit"><div><div class="kicker section-kicker">Visit us</div><h2>Your table is waiting.</h2><p>Come by for Guyanese and Caribbean favorites, tropical drinks, and a warm dining room right in Queens.</p><p><a class="button green" href="https://www.google.com/maps/search/?api=1&query=142-30+Liberty+Blvd+Queens+NY+11418" target="_blank" rel="noopener">Get Directions</a></p></div><div class="details"><div class="row"><span>Address</span><span>142-30 Liberty Blvd, Queens, NY 11418</span></div><div class="row"><span>Phone</span><span><a href="tel:+17185550142">(718) 555-0142</a></span></div><div class="row"><span>Hours</span><span>Mon–Wed 11am–12am · Thu &amp; Sun 11am–1am · Fri–Sat 11am–late</span></div><div class="row"><span>Facebook</span><span><a href="https://www.facebook.com/SpiceRouteKitchenNYC/" target="_blank" rel="noopener">@SpiceRouteKitchenNYC</a></span></div></div></div></section>
+</main>
+<footer class="footer"><div class="wrap"><span>© 2026 Spice Route Kitchen</span><span><strong>Guyanese</strong> & Caribbean Cuisine</span></div></footer>
+<script src="script.js"></script>
+</body></html>

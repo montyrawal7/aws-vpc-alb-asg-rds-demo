@@ -1,0 +1,16 @@
+{
+  "name": "spice-route-kitchen-app",
+  "version": "1.0.0",
+  "description": "Spice Route Kitchen restaurant site with a live table reservation feature (Node/Express + PostgreSQL on RDS).",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "pg": "^8.12.0",
+    "dotenv": "^16.4.5",
+    "@aws-sdk/client-ssm": "^3.600.0"
+  }
+}
