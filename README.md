@@ -13,7 +13,7 @@ load balancing, EC2 Auto Scaling, and RDS.
 
 ## Live demo
 
-_Add your ALB DNS name here once deployed, e.g. `http://spiceroute-alb-123456789.us-east-2.elb.amazonaws.com`_
+we go live soon! add alb dns name here ->`http://spiceroute-alb-123456789.us-east-2.elb.amazonaws.com`_
 
 ## Architecture
 
